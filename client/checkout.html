@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrapay Sample Checkout</title>
+  </head>
+  <body>
+    <!-- The Centrapay button will go inside this container -->
+    <div id="centrapay-button-container"></div>
+    <!-- Example slot to show the result to a user -->
+    <p id="result-message"></p>
+    <!-- Replace YOUR_MERCHANT_ID value with your merchantId -->
+    <script src="https://sdk.centrapay.com/ecommerce/centrapay.js?merchantId=YOUR_MERCHANT_ID"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<style>
+  #centrapay-button-container {
+    max-width: 40rem;
+  }
+</style>
