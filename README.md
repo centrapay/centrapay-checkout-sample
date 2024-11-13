@@ -6,13 +6,25 @@ Sample application using Centrapay SDK for the frontend and NodeJS for the backe
 
 ## Run this project
 
-### Locally
+## Install Dependencies
 
-In your terminal run:
+```
+yarn install
+docker compose run script yarn install
+```
 
-`yarn install`
+## Running
 
-`yarn start` and navigate to [http://localhost:6789/](http://localhost:6789/).
+```
+yarn start
+```
+
+Optionally, to run in docker:
+```
+docker compose up
+```
+
+View the app at http://localhost:6789
 
 ### Frontend
 

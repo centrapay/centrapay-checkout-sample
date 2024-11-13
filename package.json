@@ -16,5 +16,9 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "engines": {
+    "node": "22.x.x"
+  },
+  "packageManager": "yarn@4.5.1"
 }
