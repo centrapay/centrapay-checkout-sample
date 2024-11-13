@@ -1,0 +1,24 @@
+{
+  "name": "centrapay-checkout-sample",
+  "description": "Sample Node.js web app to integrate Centrapay for online payments",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "format": "npx prettier --single-quote --write **/*.{js,md}"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": "22.x.x"
+  },
+  "packageManager": "yarn@4.5.1"
+}

@@ -1,0 +1,19 @@
+services:
+  app:
+    image: node:22-alpine
+    init: true
+    working_dir: /work
+    volumes: [ ".:/work" ]
+    ports: [ "6789:8080" ]
+    environment:
+      - "PORT=8080"
+    stop_signal: SIGKILL
+    command: [ sh, -c, "yarn start" ]
+
+  script:
+    image: node:22
+    init: true
+    working_dir: /work
+    volumes: [ ".:/work" ]
+    command: [ echo, "No script provided. Run `docker compose run script {script_file}` to run a script" ]
+    stop_signal: SIGKILL
