@@ -8,11 +8,12 @@ const {
   CENTRAPAY_MERCHANT_CONFIG_ID,
   PORT = 6789,
 } = process.env;
-const base = 'https://service.cp42.click';
+const base = 'https://service.centrapay.com';
 const app = express();
 
 // Host static files
-app.use(express.static('client'));
+app.use('/redirect-client', express.static('redirect-client'));
+app.use('/popup-client', express.static('popup-client'));
 
 // Parse post params sent in body in json format
 app.use(express.json());
@@ -88,7 +89,23 @@ app.get('/api/payment-requests/:paymentRequestId', async (req, res) => {
 
 // Serve index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve('./client/checkout.html'));
+  res.sendFile(path.resolve('./index.html'));
+});
+
+// Serve redirect client
+app.get('/redirect', (req, res) => {
+  res.sendFile(path.resolve('./redirect-client/checkout.html'));
+});
+app.get('/paid', (req, res) => {
+  res.sendFile(path.resolve('./redirect-client/paid.html'));
+});
+app.get('/cancel', (req, res) => {
+  res.sendFile(path.resolve('./redirect-client/cancel.html'));
+});
+
+// Serve popup client
+app.get('/popup', (req, res) => {
+  res.sendFile(path.resolve('./popup-client/checkout.html'));
 });
 
 app.listen(PORT, () => {

@@ -13,6 +13,20 @@ yarn install
 docker compose run script yarn install
 ```
 
+## Configuration
+
+### Backend
+
+- Rename the `.env.example` file to `.env`.
+- Inside of the `.env` file:
+  - Replace `YOUR_API_KEY` with your Centrapay API Key.
+  - Replace `YOUR_MERCHANT_CONFIG_ID` your Centrapay Merchant Config ID.
+
+### Client
+- Redirect method: There is nothing further to configure ✅
+- Popup method: Open `popup-client/checkout.html` and replace the `YOUR_MERCHANT_ID` string in the script tag with your Centrapay Merchant ID.
+
+
 ## Running
 
 ```
@@ -25,19 +39,6 @@ docker compose up
 ```
 
 View the app at http://localhost:6789
-
-### Frontend
-
-- Open `checkout.html` and replace the `test` string in the script tag with your Centrapay Merchant ID.
-
-### Backend
-
-- Rename the `.env.example` file to `.env`.
-- Inside of the `.env` file:
-  - Replace `YOUR_API_KEY` with your Centrapay API Key.
-  - Replace `YOUR_MERCHANT_CONFIG_ID` your Centrapay Merchant Config ID.
-- Run `yarn install` in your terminal
-- Run `yarn start` in your terminal
 
 ## Legal
 
