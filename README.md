@@ -2,18 +2,9 @@
 
 Sample application using Centrapay SDK for the frontend and NodeJS for the backend.
 
-[Centrapay E-commerce Guide](https://docs.centrapay.com/guides/ecommerce-website/)
+📝 [Centrapay E-commerce Guide](https://docs.centrapay.com/guides/ecommerce-website/)
 
-## Run this project
-
-## Install Dependencies
-
-```
-yarn install
-docker compose run script yarn install
-```
-
-## Configuration
+## Configure
 
 ### Backend
 
@@ -27,14 +18,21 @@ docker compose run script yarn install
 - Popup method: Open `popup-client/checkout.html` and replace the `YOUR_MERCHANT_ID` string in the script tag with your Centrapay Merchant ID.
 
 
-## Running
+## Run
+
+This project can be run locally or within a Docker environment.
+
+### Local
 
 ```
+yarn install
 yarn start
 ```
 
-Optionally, to run in docker:
+### Docker
+
 ```
+docker compose run script yarn install
 docker compose up
 ```
 
